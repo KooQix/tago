@@ -64,7 +64,7 @@ type MyModel struct {
 t := tago.TaGo{Name: "gorm2"}
 
 // ✅ Compute once and cache
-cachedTags := t.Get(&MyModel{})
+cachedTags := t.Get(MyModel{})
 
 // Use tags later without reflection overhead
 t.Apply(cachedTags, map[tago.Instruction]func(f tago.FieldName){
